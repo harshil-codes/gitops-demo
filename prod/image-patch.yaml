@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: webserver
 spec:
   template:
     spec:
       containers:
-        - name: nginx
+        - name: webserver
           image: nginxinc/nginx-unprivileged
