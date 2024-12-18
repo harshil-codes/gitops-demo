@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: httpd
-          image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          image: rhel8/httpd-24
