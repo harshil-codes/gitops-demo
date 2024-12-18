@@ -6,5 +6,5 @@ spec:
   template:
     spec:
       containers:
-        - name: nginx
-          image: nginxinc/nginx-unprivileged
+        - name: httpd
+          image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
