@@ -1,0 +1,6 @@
+#namespace: dev
+resources:
+  - ../base
+patchesStrategicMerge:
+  - deployment-patch.yaml
+  - image-patch.yaml
