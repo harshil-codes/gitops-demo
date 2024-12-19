@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          image: nginxinc/nginx-unprivileged
