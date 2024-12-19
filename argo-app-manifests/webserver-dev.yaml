@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webserver-dev
+  namespace: myapp-argo-dev
+spec:
+  destination:
+    namespace: myapp
+    server: 'https://kubernetes.default.svc'
+#  ignoreDifferences:
+#    - group: '*'
+#      jsonPointers:
+#        - /spec/host
+#      kind: Route
+#      name: webserver
+  project: default
+  source:
+    path: dev
+    repoURL: 'https://github.com/harshil-codes/gitops-demo.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
