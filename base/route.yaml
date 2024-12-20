@@ -3,7 +3,7 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: webserver
 spec:
-  host: ""
+  host: '' 
   to:
     kind: Service
     name: webserver
@@ -12,4 +12,5 @@ spec:
     targetPort: 8080
   tls:
     termination: edge
+    insecureEdgeTerminationPolicy: Allow
   wildcardPolicy: None
